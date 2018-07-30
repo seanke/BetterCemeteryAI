@@ -52,9 +52,9 @@
   <ItemGroup>
     <Compile Include="AIHelper.cs" />
     <Compile Include="BuildingExtension.cs" />
+    <Compile Include="LoadingExtension.cs" />
     <Compile Include="NewCemetaryAI.cs" />
     <Compile Include="LogHelper.cs" />
-    <Compile Include="PrefabAIInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.cs" />
     <Compile Include="ThreadingExtension.cs" />
