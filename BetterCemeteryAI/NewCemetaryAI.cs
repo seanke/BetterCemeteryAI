@@ -168,7 +168,7 @@ namespace BetterCemeteryAI
                         Singleton<TransferManager>.instance.AddIncomingOffer(TransferManager.TransferReason.Dead, offer3);
                     }
 
-                    if(buildingData.m_customBuffer1 > 2000)
+                    if(buildingData.m_customBuffer1 > (m_corpseCapacity * 2/3))
                     {
                         TransferManager.TransferOffer offer = default(TransferManager.TransferOffer);
                         offer.Priority = 0;
