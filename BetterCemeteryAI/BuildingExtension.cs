@@ -18,7 +18,7 @@ namespace BetterCemeteryAI
                 var b = Singleton<BuildingManager>.instance.m_buildings.m_buffer[id];
                 if (!b.Info.m_class.name.Equals("DeathCare Facility")) return;
 
-                AIHelper.ChangeBuildingAI(b, typeof(NewCemetaryAI));
+                AIHelper.ApplyNewAIToBuilding(b);
             }
             catch (Exception e)
             {

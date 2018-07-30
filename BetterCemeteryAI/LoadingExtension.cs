@@ -1,25 +1,16 @@
 ﻿using ColossalFramework;
 using ICities;
 using System;
-using System.Reflection;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 namespace BetterCemeteryAI
 {
-    public class ThreadingExtension : ThreadingExtensionBase
+    public class LoadingExtension : LoadingExtensionBase
     {
-        int b = Singleton<SimulationManager>.instance.m_randomizer.Int32(10000u);
-        int a = 0;
-
-        public override void OnAfterSimulationTick()
+        public override void OnLevelLoaded(LoadMode mode)
         {
-            ReloadIfRequired();
-        }
-
-        private void ReloadIfRequired()
-        {
-            if (a == b) return;
-            a = b;
-
             try
             {
                 Building[] buffer = Singleton<BuildingManager>.instance.m_buildings.m_buffer;
@@ -40,6 +31,8 @@ namespace BetterCemeteryAI
             {
                 LogHelper.Information(e.ToString());
             }
+
+            LogHelper.Information("Loaded Mod");
         }
-    } 
+    }
 }
